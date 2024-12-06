@@ -295,23 +295,13 @@
         </el-col>
     </el-row>
 
-    <el-row type="flex" justify="center">
-        <el-col :xs="20" :sm="20" :md="15" :lg="15" :xl="15">
-            <div>
-                <span class="c_font2_1"> <strong style="font-size: 18px">Welcome to Reach Out to Me! </strong></span><br>
-                If you are interested in working with me, please
-                fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSf10zr1Qshz9WnXkUN4Z47jo4A4eerlJ3YBGQxRBKshCdO1QQ/viewform?usp=sf_link">form</a> or email me!
-            </div>
-        </el-col>
-    </el-row>
-
     <!-- News -->
     <el-row type="flex" justify="center" style="margin-top: 50px">
         <el-col :xs="20" :sm="20" :md="15" :lg="15" :xl="15">
             <el-collapse v-model="activeNames">
                 <h1>News</h1>
                 <ul class="no-bullets" style="padding-left: 50px;line-height: 1.5em">
-                    <li>[July 2024] OpenAI Research Access Granted. Thank you, OpenAI!
+                    <li>[July 2024] <a style="color:#0088d2;" href="https://openai.com/form/researcher-access-program/">OpenAI Research Access</a> Granted. Thank you, OpenAI!
                     </li>
                 </ul>
                 <el-collapse-item title="archived..." name="1" style="padding-left: 50px">
@@ -344,6 +334,21 @@
             <div style="border-top: 2px black solid;margin-top: 50px">
                 <div style="margin-top: 50px;font-size: 30px">Selected Research Paper</div>
                 <div class="selected-publications">
+                    <el-row type="flex" justify="center" style="padding-top: 50px">
+                        <el-col :xs="24" :sm="24" :md="10" :lg="10" :xl="10">
+                            <div class="disp_wrapper">
+                                <img src="./img/gigahands.jpg" width="400px" height="auto" title="GigaHands Teaser">
+                            </div>
+                        </el-col>
+                        <el-col :xs="24" :sm="24" :md="14" :lg="14" :xl="14">
+                            <strong>GigaHands: A Massive Annotated Dataset of Bimanual Hand Activities.</strong>
+                            <br><em> <strong>R. Fu*</strong>, D.X. Zhang*, A. Jiang, W.J. Fu, A. Funk, D. Ritchie, S. Sridhar.</em>
+                            <br><strong>Arxiv 2024</strong></em>
+                            <br><em class="small_font">We introduce GigaHands, a massive annotated dataset capturing 34 hours of bimanual hand activities, totaling 14k motion clips derived from 183 million frames paired with 84k text annotations. The scale and diversity of GigaHands enable broad applications, including text-driven action synthesis, hand motion captioning, and dynamic radiance field reconstruction.</em>
+                            <br><a href="https://www.arxiv.org/abs/2412.04244" class="small_font">[paper]</a>
+                            <a href="https://ivl.cs.brown.edu/research/gigahands.html" class="small_font">[project]</a>
+                        </el-col>
+                    </el-row>
                     <el-row type="flex" justify="center" style="padding-top: 50px">
                         <el-col :xs="24" :sm="24" :md="10" :lg="10" :xl="10">
                             <div class="disp_wrapper">
