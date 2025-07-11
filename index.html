@@ -4,13 +4,21 @@
     <meta charset="UTF-8">
     <title>Rao FU | Homepage</title>
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Inter', 'Segoe UI', Arial, sans-serif !important;
         }
-
+        .site-wrapper {
+            max-width: 1800px;
+            margin: 0 auto;         /* centers the content horizontally */
+            padding: 0 24px;        /* nice side padding for small screens */
+            font-size: 16px;
+        }
         .grid-content {
             border-radius: 4px;
             min-height: 36px;
@@ -80,6 +88,33 @@
             background-color: #0088d2;
         }
 
+        .nav-bar {
+        display: flex;
+        justify-content: center;  /* spread out evenly */
+        align-items: center;
+        gap: 28px;                /* space between links */
+        background: #000000;
+        height: 44px;
+        border-radius: 10px;
+        margin-top: 12px;
+        margin-bottom: 24px;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 17px;
+            padding: 0 8px;
+            transition: color 0.2s;
+            font-weight: 500;
+            line-height: 44px;
+        }
+
+        .nav-link:hover {
+            color: #0088d2;
+            text-shadow: 0 6px 6px #0088d2;
+        }
+
         .el-collapse-item__header,
         .el-collapse-item__wrap,
         .el-collapse {
@@ -97,6 +132,11 @@
         @media (max-width: 768px) {
             .selected-publications img {
                 width: 100%;
+                height: auto;
+                max-width: 360px; /* or whatever you prefer */
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
             }
 
             .selected-publications .el-col {
@@ -107,17 +147,49 @@
         @media (min-width: 769px) {
             .selected-publications img {
                 width: 100%;
+                height: auto;
+                max-width: 360px; /* or whatever you prefer */
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
             }
 
             .selected-publications .el-col {
                 padding: 10px;
             }
         }
+        .sticky-cat {
+            position: fixed;
+            right: 30px;
+            bottom: 40px;
+            width: 160px;        /* Cat is 130px tall */
+            z-index: 10000;
+            pointer-events: none;
+            user-select: none;
+            transition: transform 0.15s;
+        }
+        .paw-print {
+            position: fixed;
+            width: 36px;
+            height: 36px;
+            z-index: 9999;
+            opacity: 0.85;
+            pointer-events: none;
+            animation: paw-fade 1.5s forwards;
+        }
+        @keyframes paw-fade {
+            0% { opacity: 0.85; transform: scale(1) rotate(-12deg);}
+            80% { opacity: 0.7; }
+            100% { opacity: 0; transform: scale(1.18) rotate(9deg);}
+        }
     </style>
 </head>
 
 <body>
 <div id="app">
+    <img src="./img/cat_walk.gif" class="sticky-cat" id="walking-cat" alt="Walking Cat">
+
+    <div class="site-wrapper">
     <!-- Title Paragraph -->
     <el-row>
         <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" style="text-align: center;margin-top: 10px">
@@ -135,7 +207,7 @@
     </el-row>
 
     <!-- Nav Bar -->
-    <el-row type="flex" justify="center">
+    <!-- <el-row type="flex" justify="center">
         <el-col :xs="24" :sm="24" :md="16" :lg="16" :xl="16" style="text-align: center;margin: 0px auto;">
             <el-row type="flex" justify="center" style="background-color: black;height: 40px;line-height: 40px">
                 <el-col class="col1" :xs="4" :sm="4" :md="2" :lg="2" :xl="1" style="text-align: center;font-size: 14px;background-color: #0088d2;">
@@ -155,13 +227,23 @@
                 </el-col>
             </el-row>
         </el-col>
+    </el-row> -->
+<el-row type="flex" justify="center">
+    <el-col :xs="24" :sm="24" :md="20" :lg="18" :xl="16">
+        <nav class="nav-bar">
+        <a class="nav-link" href="#content_home">Home</a>
+        <a class="nav-link" href="#content_project">Research</a>
+        <a class="nav-link" href="#content_exp">Education</a>
+        <a class="nav-link" href="./resource/My_CV.pdf">CV</a>
+        <a class="nav-link" href="#">Contact</a>
+        </nav>
+    </el-col>
     </el-row>
-
     <!-- Biography -->
     <el-row type="flex" justify="center" id="content_home">
-        <el-col :xs="12" :sm="12" :md="10" :lg="10" :xl="10" style="margin-top: 50px;line-height: 20px">
+        <el-col :xs="12" :sm="12" :md="10" :lg="10" :xl="10" style="margin-top: 20px;line-height: 20px">
             <strong id="c_font1" style="font-size: 40px">Hello,</strong><br><br>
-            <span class="c_font2" style="font-size: 20px;padding-top: 50px">a bit about me:</span><br><br>
+            <span class="c_font2" style="font-size: 20px;padding-top: 20px">a bit about me:</span><br><br>
             <p class="c_font3">
                 I'm a PhD student in <a style="color:#0088d2;" href="https://cs.brown.edu/">Computer Science</a> at <a style="color:#0088d2;" href="https://www.brown.edu/">Brown University</a>.
                 My research sits at the intersection of 3D vision, computer graphics, and robotics,
@@ -180,10 +262,10 @@
                 & <a style="color:#0088d2;" href="https://visual.cs.brown.edu/">Brown VC Group</a>.
             </p>
             <p class="c_font3" style="margin-top: 25px">
-                Previously, I have enriched my research experience as an intern at 
+                Previously, I have intern at 
                 <a style="color:#0088d2;" href="https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/">Microsoft Research Asia</a>,
                 <a style="color:#0088d2;" href="https://www.autodesk.com/research/overview">Autodesk AI Research</a>,
-                and <a style="color:#0088d2;" href="https://research.facebook.com/careers/">Meta GenAI</a>.
+                and <a style="color:#0088d2;" href="https://research.facebook.com/careers/">Meta llama team</a>.
             </p>           
             <p class="c_font3" style="margin-top: 25px">
                 Prior to this, I earned my Bachelor of Engineering degree from 
@@ -228,7 +310,7 @@
     <!-- Mini Biography -->
     <el-row type="flex" justify="center">
         <el-col :xs="20" :sm="20" :md="15" :lg="15" :xl="15">
-            <div id="c_info">
+            <div id="c_info" style="margin-top: 25px">
                 <span style="font-size: 20px"> and more about me... </span><br>
                 <div class="thumbnail">
                     <img src="img/email_icon.jpg" id="button0" alt="email_button" width="60px" height="60px">
@@ -357,14 +439,30 @@
     <!-- Research -->
     <el-row type="flex" justify="center" id="content_project">
         <el-col :xs="20" :sm="20" :md="15" :lg="15" :xl="15">
-            <div style="border-top: 2px black solid;margin-top: 50px">
-                <div style="margin-top: 50px;font-size: 30px">Selected Research Paper</div>
+            <div style="border-top: 2px black solid;margin-top: 20px">
+                <div style="margin-top: 20px;font-size: 28px">Selected Research Paper</div>
                 
                 <div class="selected-publications">
+                    <el-row type="flex" justify="center" style="padding-top: 20px">
+                        <el-col :xs="24" :sm="24" :md="10" :lg="10" :xl="10">
+                            <div class="disp_wrapper">
+                                <img src="./img/project_dytact.gif" title="GigaHands Teaser">
+                            </div>
+                        </el-col>
+                        <el-col :xs="24" :sm="24" :md="14" :lg="14" :xl="14">
+                            <strong>DyTact: Capturing Dynamic Contacts in Hand-Object Manipulation.</strong>
+                            <br><em> C.X. Yan, A. Xing, C. Pokhariya, <strong>R. Fu*</strong>, S. Sridhar.</em>
+                            <br>
+                                ArXiv preprint&nbsp;2025&nbsp;
+                            <br><em class="small_font">We capture accurate dynamic contact in complex hand-object manipulation.</em>
+                            <br><a href="https://arxiv.org/pdf/2506.03103" class="small_font">[paper]</a>
+                            <a href="https://oliver-cong02.github.io/DyTact.github.io/" class="small_font">[project]</a>
+                        </el-col>
+                    </el-row>
                     <el-row type="flex" justify="center" style="padding-top: 50px">
                         <el-col :xs="24" :sm="24" :md="10" :lg="10" :xl="10">
                             <div class="disp_wrapper">
-                                <img src="./img/gigahands.jpg" width="400px" height="auto" title="GigaHands Teaser">
+                                <img src="./img/project_gigahands.gif" title="GigaHands Teaser">
                             </div>
                         </el-col>
                         <el-col :xs="24" :sm="24" :md="14" :lg="14" :xl="14">
@@ -381,7 +479,7 @@
                     <el-row type="flex" justify="center" style="padding-top: 50px">
                         <el-col :xs="24" :sm="24" :md="10" :lg="10" :xl="10">
                             <div class="disp_wrapper">
-                                <img src="./img/project_anyhome.jpg" width="400px" height="auto" title="Anyhome Structure">
+                                <img src="./img/project_anyhome.jpg" title="Anyhome Structure">
                             </div>
                         </el-col>
                         <el-col :xs="24" :sm="24" :md="14" :lg="14" :xl="14">
@@ -396,7 +494,23 @@
                     <el-row type="flex" justify="center" style="padding-top: 50px">
                         <el-col :xs="24" :sm="24" :md="10" :lg="10" :xl="10">
                             <div class="disp_wrapper">
-                                <img src="./img/charactermixer.gif" width="400px" height="auto" title="charactermixer Teaser">
+                                <img src="./img/project_scenellm.png" title="GigaHands Teaser">
+                            </div>
+                        </el-col>
+                        <el-col :xs="24" :sm="24" :md="14" :lg="14" :xl="14">
+                            <strong>Scene-LLM: Extending Language Model for 3D Visual Understanding and Reasoning.</strong>
+                            <br><em> <strong>R. Fu</strong>, J.Y. Liu, X.L Chen, Y.X. Nie, W.H. Xiong.</em>
+                            <br><strong>
+                                WACV&nbsp;2025&nbsp;
+                              </strong></em>
+                            <br><em class="small_font">We build a 3D-VLM that understand and reason in interactive 3D scenes. </em>
+                            <br><a href="https://arxiv.org/abs/2403.11401" class="small_font">[paper]</a>
+                        </el-col>
+                    </el-row>
+                    <el-row type="flex" justify="center" style="padding-top: 50px">
+                        <el-col :xs="24" :sm="24" :md="10" :lg="10" :xl="10">
+                            <div class="disp_wrapper">
+                                <img src="./img/charactermixer.gif" title="charactermixer Teaser">
                             </div>
                         </el-col>
                         <el-col :xs="24" :sm="24" :md="14" :lg="14" :xl="14">
@@ -413,7 +527,7 @@
                     <el-row type="flex" justify="center" style="padding-top: 50px">
                         <el-col :xs="24" :sm="24" :md="10" :lg="10" :xl="10">
                             <div class="disp_wrapper">
-                                <img src="./img/project_clipsculptor.jpg" width="400px" height="auto" title="TextCraft Structure">
+                                <img src="./img/project_clipsculptor.jpg" title="TextCraft Structure">
                             </div>
                         </el-col>
                         <el-col :xs="24" :sm="24" :md="14" :lg="14" :xl="14">
@@ -428,7 +542,7 @@
                     <el-row type="flex" justify="center" style="padding-top: 50px">
                         <el-col :xs="24" :sm="24" :md="10" :lg="10" :xl="10">
                             <div class="disp_wrapper">
-                                <img src="./img/project_shapecrafter.jpg" width="400px" height="auto" title="ShapeCrafter Structure">
+                                <img src="./img/project_shapecrafter.jpg" title="ShapeCrafter Structure">
                             </div>
                         </el-col>
                         <el-col :xs="24" :sm="24" :md="14" :lg="14" :xl="14">
@@ -443,7 +557,7 @@
                     <el-row type="flex" justify="center" style="padding-top: 50px">
                         <el-col :xs="24" :sm="24" :md="10" :lg="10" :xl="10">
                             <div class="disp_wrapper">
-                                <img src="./img/project_hrformer.png" width="400px" height="auto" title="HRFormer2 Structure">
+                                <img src="./img/project_hrformer.png" title="HRFormer2 Structure">
                             </div>
                         </el-col>
                         <el-col :xs="24" :sm="24" :md="14" :lg="14" :xl="14">
@@ -458,7 +572,7 @@
                     <el-row type="flex" justify="center" style="padding-top: 50px">
                         <el-col :xs="24" :sm="24" :md="10" :lg="10" :xl="10">
                             <div class="disp_wrapper">
-                                <img src="./img/project_odf.jpg" width="400px" height="auto" title="ODF Structure">
+                                <img src="./img/project_odf.jpg" title="ODF Structure">
                             </div>
                         </el-col>
                         <el-col :xs="24" :sm="24" :md="14" :lg="14" :xl="14">
@@ -472,7 +586,7 @@
                     <el-row type="flex" justify="center" style="padding-top: 50px">
                         <el-col :xs="24" :sm="24" :md="10" :lg="10" :xl="10">
                             <div class="disp_wrapper">
-                                <img src="./img/project_risanet.png" width="400px" height="auto" title="RISA-Net Structure">
+                                <img src="./img/project_risanet.jpg" title="RISA-Net Structure">
                             </div>
                         </el-col>
                         <el-col :xs="24" :sm="24" :md="14" :lg="14" :xl="14">
@@ -493,8 +607,8 @@
     <!-- Education -->
     <el-row type="flex" justify="center" id="content_exp">
         <el-col :xs="20" :sm="20" :md="15" :lg="15" :xl="15">
-            <div style="border-top: 2px black solid;margin-top: 50px">
-                <div style="margin-top: 50px;font-size: 30px">Education</div>
+            <div style="border-top: 2px black solid;margin-top: 30px">
+                <div style="margin-top: 30px;font-size: 28px">Education</div>
                 <el-row type="flex" justify="center" style="padding-top: 50px">
                     <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
                         <div>
@@ -606,8 +720,8 @@
     <!-- Experience -->
     <el-row type="flex" justify="center">
         <el-col :xs="20" :sm="20" :md="15" :lg="15" :xl="15">
-            <div style="border-top: 2px black solid;margin-top: 50px">
-                <div style="margin-top: 50px;font-size: 30px">Employment</div>
+            <div style="border-top: 2px black solid;margin-top: 30px">
+                <div style="margin-top: 30px;font-size: 28px">Employment</div>
                 <el-row type="flex" justify="center" style="padding-top: 50px">
                     <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
                         <div>
@@ -621,7 +735,7 @@
                 <el-row type="flex" justify="center">
                     <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
                         <div>
-                            Group: GenAI
+                            Group: llama Team
                         </div>
                         <div style="text-align: right">
                             Menlo Park, CA, US
@@ -768,10 +882,11 @@
     <el-row style="text-align: center">
         <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" style="margin-top: 50px">
             <div class="b_font" style="background-color: black;color: white;height: 50px;line-height: 50px">
-                &copy; 2024 by Rao FU
+                &copy; 2025 by Rao FU
             </div>
         </el-col>
     </el-row>
+</div>
 </div>
 <!-- import Vue before Element -->
 <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
@@ -789,4 +904,41 @@
         }
     })
 </script>
+
+<script>
+    const cat = document.getElementById('walking-cat');
+    const catHeight = 130; // Match the CSS width (assuming a square gif)
+    let catBottom = 40;
+    let direction = 1; // 1 = up, -1 = down
+    const speed = 1.5;
+    const bottomBound = 20;
+    function topBound() {
+        return window.innerHeight - catHeight - 20;
+    }
+
+    function moveCat() {
+        catBottom += direction * speed;
+        if (catBottom >= topBound()) direction = -1;
+        if (catBottom <= bottomBound) direction = 1;
+        cat.style.bottom = catBottom + 'px';
+    }
+    setInterval(moveCat, 10);
+
+    let lastPawPrint = catBottom;
+    setInterval(() => {
+        // Paw prints only when moving down (direction === -1)
+        if (direction === -1 && Math.abs(catBottom - lastPawPrint) > 48) {
+            lastPawPrint = catBottom;
+            const paw = document.createElement('img');
+            // Use a public paw print to be sure it loads!
+            paw.src = './img/paw.png';
+            paw.className = 'paw-print';
+            paw.style.right = '40px'; // Adjust so it sits under the cat's center
+            paw.style.bottom = (catBottom + 10) + 'px';
+            document.body.appendChild(paw);
+            setTimeout(() => { paw.remove(); }, 1500);
+        }
+    }, 60);
+</script>
+
 </html>

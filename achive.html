@@ -1,71 +1,211 @@
-<div class="c_project_wrapper">
-    <div class="c_font1_1">Course Project</div>
-    
-    <div class="c_public">
-        <div class="disp_wrapper">
-            <a href="./img/course1.png" data-lightbox="course1" data-title="CCF Big Data Computing Intelligence Contest">
-                <img src="./img/course1.png" class="project_img" title="RCCF Big Data Computing Intelligence Contes">
-            </a>
-            <p class="small_font">click image for details</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rao FU | Homepage</title>
+    <meta name="keywords" content="Rao FU, Rao FU Homepage, Rao Fu UCAS, Rao Fu Brown, Computer Science, Computer Vision, Graphics, Deep Learning, Robotics">
+    <meta name="description" content="Rao FU's personal website. A PhD student in Computer Science at Brown University with research interests in Computer Vision, Graphics, Deep Learning, and Robotics.">
+    <!-- Google Fonts: Inter & Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-font: 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            --heading-font: 'Montserrat', 'Inter', Arial, sans-serif;
+            --font-size-base: 18px;
+            --color-accent: #0088d2;
+            --color-navbar: #181a1b;
+            --color-bg: #f9fafb;
+            --color-card: #fff;
+        }
+        body {
+            font-family: var(--main-font);
+            margin: 0;
+            font-size: var(--font-size-base);
+            background: var(--color-bg);
+        }
+        nav {
+            background: var(--color-navbar);
+            box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+            padding: 0.7rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 99;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        .navbar a {
+            color: #fff;
+            font-family: var(--heading-font);
+            font-size: 1.18rem;
+            font-weight: 500;
+            padding: 0.5rem 1.5rem;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: background .2s, color .15s;
+        }
+        .navbar a.active, .navbar a:hover {
+            background: var(--color-accent);
+            color: #fff;
+        }
+        @media (max-width: 700px) {
+            .navbar { gap: 0.7rem; font-size: 1rem; }
+            .navbar a { padding: 0.5rem 1rem; font-size: 1rem; }
+        }
+        /* Home/Bio Section */
+        .main-container {
+            max-width: 950px;
+            margin: 2.2rem auto 1.5rem auto;
+            background: var(--color-card);
+            border-radius: 2rem;
+            box-shadow: 0 4px 40px 0 rgba(60,60,120,0.07);
+            padding: 2.2rem 2.4rem;
+        }
+        .bio-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.2rem;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        .bio-info {
+            flex: 3 1 330px;
+            min-width: 260px;
+        }
+        .bio-info h1 {
+            font-size: 2.4rem;
+            margin-bottom: 0.1rem;
+        }
+        .bio-info h2 {
+            font-size: 1.35rem;
+            color: var(--color-accent);
+            font-weight: 500;
+            margin-bottom: 1.3rem;
+        }
+        .bio-info p {
+            font-size: 1.12rem;
+            margin-bottom: 1.2rem;
+        }
+        .bio-photo {
+            flex: 1 1 180px;
+            min-width: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .profile-pic {
+            width: 190px;
+            height: 190px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 2px 18px rgba(0,0,0,0.11);
+            margin-bottom: 0.6rem;
+        }
+        .photo-overlay {
+            display: none;
+            position: absolute;
+            background: rgba(0,0,0,0.6);
+            color: #fff;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        .bio-photo:hover .photo-overlay { display: flex; }
+        .bio-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.1rem;
+            margin-top: 0.6rem;
+        }
+        .bio-link {
+            width: 56px; height: 56px;
+            background: #e9f1fb;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 1px 8px 0 rgba(80,100,120,0.08);
+            position: relative;
+            transition: background .16s, transform .12s;
+            cursor: pointer;
+        }
+        .bio-link img {
+            width: 56px; height: 56px; object-fit: cover; border-radius: 50%;
+        }
+        .bio-link:hover {
+            background: var(--color-accent);
+            transform: scale(1.08);
+        }
+        @media (max-width: 700px) {
+            .main-container { border-radius: 0; box-shadow: none; padding: 0.8rem 0.3rem; }
+            .bio-flex { flex-direction: column; gap: 1.2rem; }
+            .bio-photo { align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#research">Research</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
         </div>
-        <strong>OCR-based ID Card Entities Extraction, CCF Big Data Computing Intelligence Contest</strong>
-            <em class="dates">Oct. 2019</em>
-            <br><br>Objection: Extract entities from blurred and randomly rotated ID Card images
-            <br>Ranking: 47/193
-            <br><em class="small_font">In this project, we use Mathematica to preprocess the blurred image. We use OCR-based methods to extract entities from images. At last, we use rules to extract valid information by post-processing.</em>
-            <br><a href="https://www.datafountain.cn/competitions/346" class="small_font">[contest result]</a>
-        <div class="clearfloat"></div>
-    </div>
-    
-    <div class="c_public">
-        <div class="disp_wrapper">
-            <a href="./img/project2.jpg" data-lightbox="project2" data-title="A frame in the moview">
-                <img src="./img/project2.jpg" class="project_img2" title="A frame in the moview">
-            </a>
-            <p class="small_font">click image for details</p>
-        </div>
-        <strong>Maya Workshop: LandRover Defender 90</strong>
-            <em class="dates">Apr. 2020</em>
-            <br><br>Objection: Create a scence through 3D modelling, animation and visual effects
-            <br><em class="small_font">In this project, we use basic geometric shapes to modelling a indoor scence. We fine-tune to UV layout for texture mapping. Then, we use expressions to confine object motion. With different cameras and lightings, we made a shot movie of car driving scence.</em>
-        <div class="clearfloat"></div>
-    </div>
-    
-
-    <div class="c_public">
-        <div class="disp_wrapper">
-            <a href="./img/project3.png" data-lightbox="project3" data-title="Ray Tracing with OpenGL">
-                <img src="./img/project3.png" class="project_img2" title="Ray Tracing with OpenGL">
-            </a>
-            <p class="small_font">click image for details</p>
-        </div>
-        <strong>OpenGL Workshop</strong>
-            <em class="dates">Autumn 2019</em>
-            <br><br>Objection: Learn the basic algorithms of computer graphics and implement them with OpenGL
-            <br><em class="small_font">In this project, we implement Bezier Curve and Bezier surface with C and C++. Also, we use Phong Lighting Model and Ray-Tracing Algorithm with Python. Left is an example of ray-tracing rendering result of some basic geometry.</em>
-        <div class="clearfloat"></div>
-    </div>
-
-    <div class="c_public">
-        <div class="disp_wrapper">
-            <img src="./img/project4.jpg" class="project_img2" alt="idea">
-        </div>
-        <strong>Triplet Matching</strong>
-            <em class="dates">Autumn 2019</em>
-            <br><br>Objection: Given a sentence and entities in that sentence, extract all correct triplets
-            <br><em class="small_font">In this project, we use Transformer model to boost model’s ability. We implemented the word embedding encoder and transformer model with Tensorflow.</em>
-        <div class="clearfloat"></div>
-    </div>
-
-    <div class="c_public">
-        <div class="disp_wrapper">
-            <img src="./img/project4.jpg" class="project_img2" alt="idea">
-        </div>
-        <strong>Go-Bang Game in C language</strong>
-            <em class="dates">Autumn 2018</em>
-            <br><br>Objection: Design an Go-Bang game with interactive interface and chess-playing strategy
-            <br><em class="small_font">In this project, we designed game interface and implemented Human-vs-Human mode and Human-vs-Machine mode with C. We further optimized the chess playing strategy with α-β pruning algorithm.</em>
-        <div class="clearfloat"></div>
-    </div>
-</div>
-</div><!-- Content Project -->
+    </nav>
+    <main>
+        <!-- HOME/BIO SECTION START -->
+        <section id="home">
+            <div class="main-container">
+                <div class="bio-flex">
+                    <div class="bio-info">
+                        <h1>Rao FU</h1>
+                        <h2>Graphics / Vision / Robotics</h2>
+                        <p>
+                            I’m a PhD student in <a href="https://cs.brown.edu/">Computer Science</a> at <a href="https://www.brown.edu/">Brown University</a>.<br>
+                            My research sits at the intersection of 3D vision, computer graphics, and robotics. I work to enable machines to imagine and interact with the world in human-like ways.<br><br>
+                            I’m fortunate to work with Prof. <a href="https://srinathsridhar.com">Srinath Sridhar</a> and Prof. <a href="https://dritchie.github.io/">Daniel Ritchie</a> at <a href="https://ivl.cs.brown.edu/">Brown IVL</a> & <a href="https://visual.cs.brown.edu/">VC Group</a>.
+                        </p>
+                        <p>
+                            Previously: Intern at <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/">Microsoft Research Asia</a>, <a href="https://www.autodesk.com/research/overview">Autodesk AI Research</a>, <a href="https://research.facebook.com/careers/">Meta GenAI</a>.<br>
+                            B.E. from <a href="https://en.wikipedia.org/wiki/University_of_the_Chinese_Academy_of_Sciences/">UCAS</a>.
+                        </p>
+                        <div class="bio-links">
+                            <div class="bio-link" onclick="window.location.href = 'mailto:rao_fu@brown.edu';">
+                                <img src="img/email_icon.jpg" alt="Email">
+                            </div>
+                            <div class="bio-link" onclick="window.location.href='./resource/My_CV.pdf';">
+                                <img src="img/cv_icon.jpg" alt="CV">
+                            </div>
+                            <div class="bio-link" onclick="window.location.href = 'https://scholar.google.com/citations?hl=en&user=VWMWQEcAAAAJ';">
+                                <img src="img/gs_icon.png" alt="Google Scholar">
+                            </div>
+                            <div class="bio-link" onclick="window.location.href = 'https://www.linkedin.com/in/rao-fu-245269210/';">
+                                <img src="img/linkedin_icon.png" alt="LinkedIn">
+                            </div>
+                            <div class="bio-link" onclick="window.location.href = 'https://instagram.com/inocchi_mew?r=nametag';">
+                                <img src="img/cat_icon.jpg" alt="Cat">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bio-photo" style="position:relative;">
+                        <img src="img/profile_2023.jpg" class="profile-pic" alt="Rao FU">
+                        <!-- Optionally add overlay fun here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- HOME/BIO SECTION END -->
+    </main>
+    <footer></footer>
+</body>
+</html>
