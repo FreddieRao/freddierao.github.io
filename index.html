@@ -245,31 +245,21 @@
             <strong id="c_font1" style="font-size: 40px">Hello,</strong><br><br>
             <span class="c_font2" style="font-size: 20px;padding-top: 20px">a bit about me:</span><br><br>
             <p class="c_font3">
-                I'm a PhD student in <a style="color:#0088d2;" href="https://cs.brown.edu/">Computer Science</a> at <a style="color:#0088d2;" href="https://www.brown.edu/">Brown University</a>.
-                I'm now visiting <a style="color:#0088d2;" href="https://hands-workshop.org/">MPI Informatics</a> this summer.
-                My research sits at the intersection of 3D vision, computer graphics, and robotics,
-                where I work to enable machines to <em>imagine</em> and <em>interact</em> with
-                the world in <em>human-like</em> ways.                
-                <p>More concretely, I work on:</p>
-                <ol style="padding-left: 50px;line-height: 1.5em">
-                    <li>From Words to Worlds: How abstract, symbolic input (language) can be transformed into spatial mental models to generate worlds and actions?.</li>
-                    <li>Senses in the World: How embodied, physical input (vision, touch, and proprioception) defines and grounds mental models for action.</li>
-                    <li>Capture the World: How to effectively capture high-quality real-world physical signals to train such systems?</li>
-                </ol>
-                I'm fortunate to work with 
+                I'm a PhD student in <a style="color:#0088d2;" href="https://cs.brown.edu/">Computer Science</a> at <a style="color:#0088d2;" href="https://www.brown.edu/">Brown University</a>, 
+                where I'm fortunate to work with 
                 Prof. <a style="color:#0088d2;" href="https://srinathsridhar.com">Srinath Sridhar</a> 
-                and Prof. <a style="color:#0088d2;" href="https://dritchie.github.io/">Daniel Ritchie</a> 
-                at <a style="color:#0088d2;" href="https://ivl.cs.brown.edu/">Brown IVL</a> 
-                & <a style="color:#0088d2;" href="https://visual.cs.brown.edu/">Brown VC Group</a>.
+                and Prof. <a style="color:#0088d2;" href="https://dritchie.github.io/">Daniel Ritchie</a>.
+                I was a visiting PhD at at <a style="color:#0088d2;" href="https://people.mpi-inf.mpg.de/~theobalt/">MPI Informatics</a>, spent an amazing time working with <a style="color:#0088d2;" href="https://www.mpi-inf.mpg.de/departments/visual-computing-and-artificial-intelligence">Prof. Christian Theobalt</a> and <a style="color:#0088d2;" href="https://rishabhdabral.github.io/">Dr. Rishabh Dabral</a>.
+                I was selected as an <a style="color:#0088d2;" href="https://risingstars-eecs.mit.edu/participants/rao-fu/">MIT EECS Rising Star</a>.
             </p>
             <p class="c_font3" style="margin-top: 25px">
-                Previously, I have intern at 
+                I was a research intern at
                 <a style="color:#0088d2;" href="https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/">Microsoft Research Asia</a>,
                 <a style="color:#0088d2;" href="https://www.autodesk.com/research/overview">Autodesk AI Research</a>,
                 and <a style="color:#0088d2;" href="https://research.facebook.com/careers/">Meta llama team</a>.
             </p>           
             <p class="c_font3" style="margin-top: 25px">
-                Prior to this, I earned my Bachelor of Engineering degree from 
+                Prior to this, I earned my B.Eng degree from 
                 the <a style="color:#0088d2;" href="https://en.wikipedia.org/wiki/University_of_the_Chinese_Academy_of_Sciences/">University of the Chinese Academy of Sciences</a>, advised by <a style="color:#0088d2;" href="http://geometrylearning.com/lin/">Prof. Lin Gao</a> and <a style="color:#0088d2;" href="https://scholar.google.com/citations?user=vVx2v20AAAAJ&hl">Prof. Xilin Chen</a>. 
                 I also had a wonderful time at 
                 the <a style="color:#0088d2;" href="https://www.usc.edu/">University of Southern California</a> and
@@ -310,6 +300,29 @@
 
     <!-- Mini Biography -->
     <el-row type="flex" justify="center">
+    <el-col :xs="20" :sm="20" :md="15" :lg="15" :xl="15">
+        <div id="c_info" style="margin-top: 25px">
+        <h2 style="font-size: 20px; margin: 0 0 10px;">a bit about my research...</h2>
+
+        <p class="c_font3">
+            My research sits at the intersection of 3D vision, computer graphics, and robotics,
+            where I work to enable machines to <em>perceive multisensory spatial signals</em> and <em>dexterously interact</em> with
+            the world in <em>human-like</em> ways.
+        </p>
+
+        <p>More concretely, I work on:</p>
+        <ol style="padding-left: 0; line-height: 1.5em; margin-left: 1.25em;">
+            <li>Words and Worlds: how abstract, symbolic input (language) can be transformed into spatial mental models to generate worlds and actions?</li>
+            <li>Senses in the World: how embodied, physical input (vision, touch, and proprioception) defines and grounds mental models for action.</li>
+            <li>Capture the World: how to effectively capture high-quality real-world physical signals to train such systems?</li>
+        </ol>
+        </div>
+    </el-col>
+    </el-row>
+
+
+    <!-- Mini Biography -->
+    <el-row type="flex" justify="center" id="content_home">
         <el-col :xs="20" :sm="20" :md="15" :lg="15" :xl="15">
             <div id="c_info" style="margin-top: 25px">
                 <span style="font-size: 20px"> and more about me... </span><br>
@@ -388,7 +401,7 @@
             <em>Open to 2025-2026 Postdocs & Industry Positions </em>🌍🤝
             </h2>
         </el-col>
-        </el-row>
+    </el-row>
 
     <!-- News -->
     <el-row type="flex" justify="center" style="margin-top: 50px">
@@ -396,22 +409,28 @@
             <el-collapse v-model="activeNames">
                 <h1>News</h1>
                 <ul class="no-bullets" style="padding-left: 50px;line-height: 1.5em">
-                    <li>[May 2025] I'm visiting <a style="color:#0088d2;" href="https://hands-workshop.org/">MPI Informatics</a> this summer. See you in Germany!
+                    <li>[Sept 2025] Honored to be selected as one of the <a style="color:#0088d2;" href="https://risingstars-eecs.mit.edu/participants/rao-fu/">Rising Stars in EECS</a> — many thanks to the search committee for this recognition!
                     </li>
-                    <li>[April 2025] Our 9th <a style="color:#0088d2;" href="https://hands-workshop.org/">HANDS workshop</a> proposal got aceepted to ICCV 2025!
+                    <li>[July 2025] Invited talk at <a style="color:#0088d2;" href="https://is.mpg.de/ps">MPI Intelligent Systems</a>. Topic: Capturing Dexterity!
                     </li>
-                    <li>[April 2025] Invited talk at <a style="color:#0088d2;" href="https://www.media.mit.edu/groups/multisensory-intelligence/overview/">MIT, Multisensory Intelligence Group</a>. Topic: Capturing Dexterity!
+                    <li>[June 2025] Invited talk at Meta Robotics Group. Topic: Capturing Dexterity!
                     </li>
-                    <li>[March 2025] Invited talk at <a style="color:#0088d2;" href="https://bair.berkeley.edu/about/">UC Berkeley, Computer Vision Groups</a>. Topic: Capturing Dexterity!
-                    </li>
-                    <li>[March 2025] Invited talk at <a style="color:#0088d2;" href="https://yunzhuli.github.io/">Columbia RoboPIL</a>. Topic: Capturing Dexterity!
-                    </li>
-                    <li>[March 2025] Invited talk at <a style="color:#0088d2;" href="https://www.immersivecomputinglab.org/">NYU Immersive Computing Lab</a>. Topic: Capturing Dexterity!
+                    <li>[May 2025] I'm visiting <a style="color:#0088d2;" href="https://www.mpi-inf.mpg.de/home">MPI Informatics</a> this summer. See you in Germany!
                     </li>
                 </ul>
                 <el-collapse-item title="archived..." name="1" style="padding-left: 50px">
                     <div class="no-bullets" style="font-size: 16px;color: #000000">
                         <ul style="padding-left: 0px;line-height: 1.5em">
+                            <li>[April 2025] Our 9th <a style="color:#0088d2;" href="https://hands-workshop.org/">HANDS workshop</a> proposal got aceepted to ICCV 2025!
+                            </li>
+                            <li>[April 2025] Invited talk at <a style="color:#0088d2;" href="https://www.media.mit.edu/groups/multisensory-intelligence/overview/">MIT, Multisensory Intelligence Group</a>. Topic: Capturing Dexterity!
+                            </li>
+                            <li>[March 2025] Invited talk at <a style="color:#0088d2;" href="https://bair.berkeley.edu/about/">UC Berkeley, Computer Vision Groups</a>. Topic: Capturing Dexterity!
+                            </li>
+                            <li>[March 2025] Invited talk at <a style="color:#0088d2;" href="https://yunzhuli.github.io/">Columbia RoboPIL</a>. Topic: Capturing Dexterity!
+                            </li>
+                            <li>[March 2025] Invited talk at <a style="color:#0088d2;" href="https://www.immersivecomputinglab.org/">NYU Immersive Computing Lab</a>. Topic: Capturing Dexterity!
+                            </li>
                             <li>[Feb 2025] Invited talk at <a style="color:#0088d2;" href="https://cs.nyu.edu/~fouhey/NYCVision2025/">NYC Vision Day</a>. Topic: GigaHands!
                             </li>
                             <li>[July 2024] <a style="color:#0088d2;" href="https://openai.com/form/researcher-access-program/">OpenAI Research Access</a> Granted. Thank you, OpenAI!
@@ -629,6 +648,26 @@
                     </el-col>
                     <el-col :xs="10" :sm="10" :md="10" :lg="10" :xl="10" style="text-align: right">
                         <img class="schoollogo" src="./img/brown_logo.png" height="100px" width="auto" alt="BROWN Logo"/>
+                    </el-col>
+                </el-row>
+                <el-row type="flex" justify="center" style="padding-top: 50px">
+                    <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
+                        <div>
+                            <strong>Max Planck Institute for Informatics</strong>
+                        </div>
+                        <div style="text-align: right">
+                            May. 2025-Aug. 2025
+                        </div>
+                    </el-col>
+                </el-row>
+                <el-row style="margin-top: 20px">
+                    <el-col :xs="14" :sm="14" :md="14" :lg="14" :xl="14" style="margin-top: 20px">
+                        <ul style="padding-left: 50px">
+                            <li>Title: Visiting PhD.</li>
+                        </ul>
+                    </el-col>
+                    <el-col :xs="10" :sm="10" :md="10" :lg="10" :xl="10" style="text-align: right">
+                        <img class="schoollogo" src="./img/mpi_logo.png" height="100px" width="auto" alt="BROWN Logo"/>
                     </el-col>
                 </el-row>
                 <el-row type="flex" justify="center" style="padding-top: 50px">
