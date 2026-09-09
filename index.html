@@ -217,7 +217,7 @@
                     <div style="display: inline-block"><a class="a1" style="color: white" href="#content_project">Research</a></div>
                 </el-col>
                 <el-col class="col1" :xs="4" :sm="4" :md="2" :lg="2" :xl="1" style="text-align: center;font-size: 14px">
-                    <div style="display: inline-block"><a class="a1" style="color: white" href="#content_exp">Education</a></div>
+                    <div style="display: inline-block"><a class="a1" style="color: white" href="#content_exp">Academic Journey</a></div>
                 </el-col>
                 <el-col class="col1" :xs="4" :sm="4" :md="2" :lg="2" :xl="1" style="text-align: center;font-size: 14px">
                     <div style="display: inline-block"><a class="a1" style="color: white" href="./resource/My_CV.pdf">CV</a></div>
@@ -233,7 +233,7 @@
         <nav class="nav-bar">
         <a class="nav-link" href="#content_home">Home</a>
         <a class="nav-link" href="#content_project">Research</a>
-        <a class="nav-link" href="#content_exp">Education</a>
+        <a class="nav-link" href="#content_exp">Academic Journey</a>
         <a class="nav-link" href="./resource/My_CV.pdf">CV</a>
         <a class="nav-link" href="#">Contact</a>
         </nav>
@@ -245,15 +245,19 @@
             <strong id="c_font1" style="font-size: 40px">Hello,</strong><br><br>
             <span class="c_font2" style="font-size: 20px;padding-top: 20px">a bit about me:</span><br><br>
             <p class="c_font3">
-                I'm a PhD student in <a style="color:#0088d2;" href="https://cs.brown.edu/">Computer Science</a> at <a style="color:#0088d2;" href="https://www.brown.edu/">Brown University</a>, 
-                where I'm fortunate to work with 
-                Prof. <a style="color:#0088d2;" href="https://srinathsridhar.com">Srinath Sridhar</a> 
+                I'm a postdoctoral scholar at the <a style="color:#0088d2;" href="https://bair.berkeley.edu/">Berkeley AI Research (BAIR) Lab</a>,
+                where I'm fortunate to work with
+                Prof. <a style="color:#0088d2;" href="https://people.eecs.berkeley.edu/~malik/">Jitendra Malik</a>
+                and Prof. <a style="color:#0088d2;" href="https://people.eecs.berkeley.edu/~kanazawa/">Angjoo Kanazawa</a>.
+                I earned my PhD in <a style="color:#0088d2;" href="https://cs.brown.edu/">Computer Science</a> at <a style="color:#0088d2;" href="https://www.brown.edu/">Brown University</a>,
+                advised by Prof. <a style="color:#0088d2;" href="https://srinathsridhar.com">Srinath Sridhar</a>
                 and Prof. <a style="color:#0088d2;" href="https://dritchie.github.io/">Daniel Ritchie</a>.
-                I was a visiting PhD at at <a style="color:#0088d2;" href="https://people.mpi-inf.mpg.de/~theobalt/">MPI Informatics</a>, spent an amazing time working with <a style="color:#0088d2;" href="https://www.mpi-inf.mpg.de/departments/visual-computing-and-artificial-intelligence">Prof. Christian Theobalt</a> and <a style="color:#0088d2;" href="https://rishabhdabral.github.io/">Dr. Rishabh Dabral</a> in Germany.
-                I was named as an <a style="color:#0088d2;" href="https://risingstars-eecs.mit.edu/participants/rao-fu/">MIT EECS Rising Star</a>.
+                I was a visiting PhD at <a style="color:#0088d2;" href="https://people.mpi-inf.mpg.de/~theobalt/">MPI Informatics</a>, spent an amazing time working with <a style="color:#0088d2;" href="https://www.mpi-inf.mpg.de/departments/visual-computing-and-artificial-intelligence">Prof. Christian Theobalt</a> and <a style="color:#0088d2;" href="https://rishabhdabral.github.io/">Dr. Rishabh Dabral</a> in Germany.
+                I was named a <a style="color:#0088d2;" href="https://www.microsoft.com/en-us/research/academic-program/microsoft-research-fellowship/fellows/">Microsoft Research Fellow 2026</a> and an <a style="color:#0088d2;" href="https://risingstars-eecs.mit.edu/participants/rao-fu/">MIT EECS Rising Star 2025</a>.
             </p>
             <p class="c_font3" style="margin-top: 25px">
                 I was a research intern at
+                <a style="color:#0088d2;" href="https://www.amazon.science/">Amazon FAR</a>,
                 <a style="color:#0088d2;" href="https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/">Microsoft Research Asia</a>,
                 <a style="color:#0088d2;" href="https://www.autodesk.com/research/overview">Autodesk AI Research</a>,
                 and <a style="color:#0088d2;" href="https://research.facebook.com/careers/">Meta llama team</a>.
@@ -366,6 +370,14 @@
                 </div> <!-- .thumbnail -->
 
                 <div class="thumbnail">
+                    <img src="img/bair_icon.jpg" id="button8" alt="bair_button" width="60px" height="60px">
+                    <div class="overlay" onclick="window.location.href = 'https://bair.berkeley.edu/';">
+                        <p>Postdoc@<br>BAIR
+                        </p>
+                    </div>
+                </div> <!-- .thumbnail -->
+
+                <div class="thumbnail">
                     <img src="img/Brown_icon.jpg" id="button5" alt="brown_button" width="60px" height="60px">
                     <div class="overlay" onclick="window.location.href = 'https://www.brown.edu/';">
                         <p>Ph.D.@<br>Brown
@@ -393,22 +405,16 @@
         </el-col>
     </el-row>
 
-    <!-- Your custom call-out -->
-    <el-row type="flex" justify="center" style="margin: 30px 0;">
-        <el-col :xs="20" :sm="20" :md="15" :lg="15" :xl="15" style="text-align: center;">
-            <h2 style="font-size: 20px; font-weight: 400;">
-            Future Innovator On Deck 🚀<br>
-            <em>Open to 2025-2026 Academic & Industry Positions </em>🌍🤝
-            </h2>
-        </el-col>
-    </el-row>
-
     <!-- News -->
     <el-row type="flex" justify="center" style="margin-top: 50px">
         <el-col :xs="20" :sm="20" :md="15" :lg="15" :xl="15">
             <el-collapse v-model="activeNames">
                 <h1>News</h1>
                 <ul class="no-bullets" style="padding-left: 50px;line-height: 1.5em">
+                    <li>[Sept. 2026] Successfully defended my thesis (<em>From Words to Worlds: Bridging Linguistic and Spatial Intelligence</em>)! OMG! Thanks to my committee, my collaborators, and everyone who has been so supportive! I'm lucky to have you all!
+                    </li>
+                    <li>[June 2026] I'm excited to join <a style="color:#0088d2;" href="https://www.amazon.science/">Amazon FAR</a> as a research intern! See you at FAR!
+                    </li>
                     <li>[Apr. 2026] Honored to be named as one of the <a style="color:#0088d2;" href="https://www.microsoft.com/en-us/research/academic-program/microsoft-research-fellowship/fellows/">Microsoft Research Fellows 2026</a>! Thank you, Microsoft Research!
                     </li>
                     <li>[Jan. 2026] Our 1st <a style="color:#0088d2;" href="https://sense-of-space.github.io/">Sense of Space workshop</a> proposal got aceepted to CVPR 2026!
@@ -652,14 +658,35 @@
     <el-row type="flex" justify="center" id="content_exp">
         <el-col :xs="20" :sm="20" :md="15" :lg="15" :xl="15">
             <div style="border-top: 2px black solid;margin-top: 30px">
-                <div style="margin-top: 30px;font-size: 28px">Education</div>
+                <div style="margin-top: 30px;font-size: 28px">Academic Journey</div>
+                <el-row type="flex" justify="center" style="padding-top: 50px">
+                    <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
+                        <div>
+                            <strong>UNIVERSITY OF CALIFORNIA, BERKELEY</strong>
+                        </div>
+                        <div style="text-align: right">
+                            Sept. 2026 – Present
+                        </div>
+                    </el-col>
+                </el-row>
+                <el-row style="margin-top: 20px">
+                    <el-col :xs="14" :sm="14" :md="14" :lg="14" :xl="14" style="margin-top: 20px">
+                        <ul style="padding-left: 50px">
+                            <li>Title: Postdoctoral Scholar</li>
+                            <li>Lab: Berkeley Artificial Intelligence Research (BAIR)</li>
+                        </ul>
+                    </el-col>
+                    <el-col :xs="10" :sm="10" :md="10" :lg="10" :xl="10" style="text-align: right">
+                        <img class="schoollogo" src="./img/berkeley_logo.png" height="100px" width="auto" alt="UC Berkeley Logo"/>
+                    </el-col>
+                </el-row>
                 <el-row type="flex" justify="center" style="padding-top: 50px">
                     <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
                         <div>
                             <strong>BROWN UNIVERSITY</strong>
                         </div>
                         <div style="text-align: right">
-                            Sept.2021 – Present
+                            Sept. 2021 – Aug. 2026
                         </div>
                     </el-col>
                 </el-row>
@@ -789,6 +816,33 @@
                 <el-row type="flex" justify="center" style="padding-top: 50px">
                     <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
                         <div>
+                            <strong>Research intern: Amazon</strong>
+                        </div>
+                        <div style="text-align: right">
+                            June. 2026 – Sept. 2026
+                        </div>
+                    </el-col>
+                </el-row>
+                <el-row type="flex" justify="center">
+                    <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
+                        <div>
+                            Group: Frontier AI &amp; Robotics (FAR)
+                        </div>
+                        <div style="text-align: right">
+                            San Francisco, CA, US
+                        </div>
+                    </el-col>
+                </el-row>
+                <el-row>
+                    <el-col :xs="14" :sm="14" :md="14" :lg="14" :xl="14">
+                        <ul style="padding-left: 50px">
+                            <li>Research on Embodied AI and Robot Learning.</li>
+                        </ul>
+                    </el-col>
+                </el-row>
+                <el-row type="flex" justify="center" style="padding-top: 50px">
+                    <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
+                        <div>
                             <strong>Research intern: Meta</strong>
                         </div>
                         <div style="text-align: right">
@@ -864,61 +918,6 @@
                     <el-col :xs="14" :sm="14" :md="14" :lg="14" :xl="14">
                         <ul style="padding-left: 50px">
                             <li>Research on High-Resolution Machine Perception Backbone</li>
-                        </ul>
-                    </el-col>
-                </el-row>
-                <el-row type="flex" justify="center" style="padding-top: 80px">
-                    <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
-                        <div>
-                            <strong>Research intern: University of California, San Diego</strong>
-                        </div>
-                        <div style="text-align: right">
-                            May. 2020 – Nov. 2020
-                        </div>
-                    </el-col>
-                </el-row>
-                <el-row type="flex" justify="center">
-                    <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
-                        <div>
-                            Advisor: Prof. Hao Su
-                        </div>
-                        <div style="text-align: right">
-                            San Diego, CA, USA
-                        </div>
-                    </el-col>
-                </el-row>
-                <el-row>
-                    <el-col :xs="14" :sm="14" :md="14" :lg="14" :xl="14">
-                        <ul style="padding-left: 50px">
-                            <li>Research on Robot Grasping with Two-Finger Grippers and Humanoid Robot Grippers.</li>
-                        </ul>
-                    </el-col>
-                </el-row>
-                <el-row type="flex" justify="center" style="padding-top: 80px">
-                    <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
-                        <div>
-                            <strong>Research intern: Institute of Computing Technology, CAS.</strong>
-                        </div>
-                        <div style="text-align: right">
-                            Jul. 2019 – Nov. 2020
-                        </div>
-                    </el-col>
-                </el-row>
-                <el-row type="flex" justify="center">
-                    <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
-                        <div>
-                            Advisor: Prof. Lin Gao
-                        </div>
-                        <div style="text-align: right">
-                            Beijing, China
-                        </div>
-                    </el-col>
-                </el-row>
-                <el-row>
-                    <el-col :xs="14" :sm="14" :md="14" :lg="14" :xl="14">
-                        <ul style="padding-left: 50px">
-                            <li>Research on Fine-grained 3D Shape Retrieval.</li>
-                            <li>Research on Talking Head Generation.</li>
                         </ul>
                     </el-col>
                 </el-row>
